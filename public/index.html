@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Workout Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <style media="screen">
+      body {
+        text-align: center;
+        background-color: rgb(48, 98, 192);
+      }
+
+      .primary {
+        color: #1eee1e;
+      }
+
+      h1 {
+        font-size: 40px;
+        color: white;
+      }
+
+      h2,
+      h4,
+      label {
+        color: white;
+      }
+
+      .delete {
+        margin-left: 20px;
+        color: red;
+        cursor: pointer;
+        text-align: right;
+      }
+
+      input[type="text"] {
+        width: 400px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 28px;
+        background-color: antiquewhite;
+      }
+
+      textarea {
+        width: 500px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 24px;
+        background-color: antiquewhite;
+      }
+
+      .radio-inline {
+        background-color: antiquewhite;
+      }
+
+      .data-title {
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      #results {
+        margin-top: 3px;
+        width: 500px;
+        height: 150px;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: antiquewhite;
+      }
+
+      #action-button {
+        display: inline-block;
+      }
+
+      #buttons {
+        margin: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container col-md-4 col-md-offset-4">
+      <h2>Status: <span id="status" class="primary">Creating</span></h2>
+      <h4>Create a new workout by submitting its name & description</h4>
+      <h4>Click a Previous Workout Plan below to modify</h4>
+      <div id="user-input">
+        <form>
+          <div class="row">
+            <h2>Create Workout Plan</h2>
+            <input
+              type="text"
+              id="exercise-name"
+              class="form-control"
+              name="name"
+              placeholder="Workout Name"
+              autofocus
+            />
+            <input
+              type="text"
+              id="description"
+              class="form-control"
+              name="description"
+              placeholder="Exercise Description"
+              autofocus
+            />
+          </div>
+          <div class="row">
+            <div class="col-4 d-float align-left">
+              <span>
+                <h4>Exercise Difficulty</h4>
+                <label for="easy" class="mx-2 p-3">
+                  <input
+                    type="radio"
+                    class="radio-inline mx-2 p-3"
+                    name="difficulty"
+                    id="easy"
+                    value="easy"
+                    checked
+                  />Easy
+                </label>
+                <label for="medium">
+                  <input
+                    type="radio"
+                    class="radio-inline mx-2 p-3"
+                    name="difficulty"
+                    id="medium"
+                    value="medium"
+                  />Medium
+                </label>
+                <label for="hard">
+                  <input
+                    type="radio"
+                    class="radio-inline mx-2 p-3"
+                    name="difficulty"
+                    id="hard"
+                    value="hard"
+                  />Hard
+                </label>
+              </span>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </form>
+      </div>
+
+      <div id="action-button">
+        <button class="mx-2 p-3" id="make-new">Submit</button>
+      </div>
+      <div>
+        <h2>Previous Workout Plans</h2>
+      </div>
+      <div class="row">
+        <div id="results"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

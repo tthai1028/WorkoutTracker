@@ -1,0 +1,26 @@
+{
+  "name": "nosql-workout-tracker-homework",
+  "version": "1.0.0",
+  "description": "![Bootcamp Homework shield](https://img.shields.io/badge/Bootcamp_NoSQL_Workout_Tracker_Homework-green)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbush2014/NoSQL-Workout-Tracker-Homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbush2014/NoSQL-Workout-Tracker-Homework/issues"
+  },
+  "homepage": "https://github.com/cbush2014/NoSQL-Workout-Tracker-Homework#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
+}
